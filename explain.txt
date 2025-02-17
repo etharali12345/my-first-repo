@@ -74,5 +74,5 @@ Note: branches exist in isolation: (main does not know the changes in the branch
     When you clone a repository, Git automatically names the remote repository origin.
     Commands like (git push origin main) tell Git to push your changes to the main branch on the origin remote (the one on GitHub or wherever the repository is hosted).
     #      (git pull)
-
+    only pulls changes for the current branch you're working on
         
