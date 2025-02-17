@@ -75,4 +75,9 @@ Note: branches exist in isolation: (main does not know the changes in the branch
     Commands like (git push origin main) tell Git to push your changes to the main branch on the origin remote (the one on GitHub or wherever the repository is hosted).
     #      (git pull)
     only pulls changes for the current branch you're working on
-        
+
+
+
+
+#        (gh auth login)
+The command is used to authenticate your GitHub CLI (gh) with your GitHub account
