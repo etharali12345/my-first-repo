@@ -1,17 +1,76 @@
-1- we make dir where we when to store the repo
-2- in this dir we we make clone of the repo
-(git clone ..*the copied link*..)
+1- Make dir to store the repo in it
+2- In it we make clone of the repo:
+        (git clone *the copied link of repo*)
 3- get inside the repo that have been cloned in the dir
 4- There 4 workflow: modified -> staged -> commited -> remote
 5- to see the status of the repu use the command:
-(git status)
+        (git status)
 
-
-6- u can create a file in the repo will change the status to untracked file
-7- then we use the command
-(git add fileName.extenxtion)
-this will put the file on the track (meaning it will be part of a code commited)
-8- then I can unstage the file or commited the code using the following command:
-(git commit -m "write a message here like new file is added"
-
+6- Creating a file in the repo changes the status to untracked file
+7- To make file on the track (meaning it will be part of a code commited)
+        (git add fileName.extenxtion)
+8- Then we can unstage the file or commited the code using the following command:
+        (git commit -m "write a message here like a new file is added")
 9- all the previous cahnges are local, run the push command to be uploaded it in the remote server
+   
+
+
+-----------Creating New branches----------------------------------------
+
+1-The following will create a branch an move us to this branch
+        (git checkout -B branchName)
+
+2-The folloing will creat the branch but we will remain in the main
+        (git branch branchName)
+
+3-To see the current branch we're in:
+        (git branch)
+
+Note: branches are exist in isolation: (main have no knowledge of the changes in the branches. Therefore,changes need to merged back to the main)
+
+4- to push the local branch to the remote repository
+        (git push -u origin branchName)
+-u: will link the local branch to the remote branch on orign: Git remembers which remote branch your local branch should sync
+
+5- To check the main (switch the branch)
+        (git checkout main)
+        (git switch main)
+6- To receive the latest changes that were merged in it
+        (git pull)
+
+-----------in GitHub
+* Make pull request so the other review the changes, after pushing the branch with it files
+* Then merge the branch with the main, if being approved, delete or keep the branch. 
+* The purpose of the branch is to seperate the cahnges from main untill they are approved by the team.
+
+
+
+---------- Creat repo using command like
+1- make dir ex:second-reop, get in it *cd
+2- intialize the repo with the folder name
+        (git init)
+
+3-  displays the list of remote repositories & their URL || write it inside the 1st remote repo to get it URL 
+    -v: ensures that both the fetch and push URLs
+        (git remote -v)
+4- Link MySecondRepo (local repository) to MyFirstRepo (remote GitHub repository)
+    # Step 1: Navigate to MySecondRepo directory
+        cd MySecondRepo  
+
+    # Step 2: Add MyFirstRepo as a remote repository: the last line in the URL 
+        git remote add origin git@github.com:GitTutorials101/MyFirstRepo.git  
+
+    # Step 3: Verify the remote repository link
+        git remote -v  
+
+    # Step 4: Pull changes from MyFirstRepo to MySecondRepo
+        git pull origin main  
+    
+      This directory is blank. The reason for this is that I haven't set up a branch that matches with what I have on the server repository.
+    # Step 5: set up a branch main on my local that tracks the branch main from the remote
+        git checkout main  
+--------------push and pull
+    #    (git push origin main)
+    When you clone a repository, Git automatically names the remote repository origin.
+    Commands like (git push origin main) tell Git to push your changes to the main branch on the origin remote (the one on GitHub or wherever the repository is hosted).
+
