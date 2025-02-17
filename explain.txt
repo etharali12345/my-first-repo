@@ -38,14 +38,14 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 6- To receive the latest changes that were merged into it
         (git pull)
 
------------in GitHub
+-----------in GitHub ----------------------------------------
 * Make pull request so the other review the changes, after pushing the branch with its files
 * Then merge the branch with the main, if being approved, delete or keep the branch. 
 * The purpose of the branch is to separate the changes from the main until the team approves them.
 
 
 
----------- Create repo using commands like
+---------- Create repo using commands like ----------------------------------------
 1- make dir ex:second-reop, get in it *cd
 2- initialize the repo with the folder name
         (git init)
@@ -69,7 +69,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
       This directory is blank. This is because I haven't set up a branch that matches what I have on the server repository.
     # Step 5: set up a branch main on my local that tracks the branch main from the remote
         git checkout main  
---------------push and pull
+--------------push and pull ----------------------------------------
     #    (git push origin main)
     When you clone a repository, Git automatically names the remote repository origin.
     Commands like (git push origin main) tell Git to push your changes to the main branch on the origin remote (the one on GitHub or wherever the repository is hosted).
