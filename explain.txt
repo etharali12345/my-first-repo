@@ -1,9 +1,9 @@
 1- Make dir to store the repo in it
-2- In it we make a clone of the repo:
+2- Make a clone of the repo in the cloud to the locl:
         (git clone *the copied link of repo*)
 3- get inside the repo that has been cloned in the dir
 4- There 4 workflows: modified -> staged -> committed -> remote
-5- to see the status of the repu use the command:
+5- to see the status of the repo use the command:
         (git status)
 
 6- Creating a file in the repo changes the status to an untracked file
@@ -17,10 +17,10 @@
 
 -----------Creating New branches----------------------------------------
 
-1-The following will create a branch and move us to this branch
+1- Create a branch and move to it
         (git checkout -B branchName)
 
-2-The following will create the branch but we will remain in the main
+2- Create the branch but we will remain in the main
         (git branch branchName)
 
 3-To see the current branch we're in:
@@ -45,7 +45,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 
 
 
----------- Create repo using commands like ----------------------------------------
+---------- Create a repo using commands like ----------------------------------------
 1- make dir ex:second-reop, get in it *cd
 2- initialize the repo with the folder name
         (git init)
