@@ -83,7 +83,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 The command is used to authenticate your GitHub CLI (gh) with your GitHub account
 #         (gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> )
 
--------------------------Head -------------------------------
+-------------------------.git & Head -------------------------------
 
 Summary & Explanation:
 The .git folder is responsible for tracking all changes in a Git project. One of its key components is the HEAD file, which acts as a pointer to the current branch and commit. The HEAD helps Git determine which branch you are working on.
@@ -102,7 +102,7 @@ Git Commands Used:
 3- View the commit ID of the current branch:
        #    cat .git/refs/heads/main
 
--------------------------DIFF------------------------
+-------------------------DIFF & Log------------------------
 
 1- Checking Changed Files: 
 	git status: shows which files have been modified, but it does not display the actual changes.  
@@ -120,8 +120,29 @@ Git Commands Used:
      for shorter version       
          #   git log --pretty=oneline
     b-then to see the differences;
-         #   git diff commit1_ID> commit2_ID>
+         #   git diff <commit1_ID> <commit2_ID>
 
 4- Comparing Branches: To check differences between two branches:  
-         #   git diff main> branch2>
+         #   git diff <main> <branch2>
+
+-------------------------Blame-------------------------------------
+1- Tracking Changes by User:
+The git blame command tracks who made specific changes to a file, when, and what was changed. It helps track contributions in a team of developers:
+	#	git blame <file>
+The Output:
+commit_id author timestamp line_number change
+
+3- Limiting the Output: 
+Restricting the output to specific lines using (-L) flag to only display changes in a certain range.
+	#	git blame -L <start_lineNum>,<end_lineNum> <file>
+
+4- Viewing Detailed Changes:
+To see more detailed changes of a specific commit, use git log (-p) with the commit ID.
+	#	git log -p <commit_id>
+
+5- Customizing Output:
+You can adjust the display format, including showing full commit hashes, email addresses, or modifying the date format with the (-l) flag.
+	#	git blame -l <file>
+
+
 
