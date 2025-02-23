@@ -80,7 +80,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 
 
 
---------------commandS specifically for GitHub CL not GIT-----------------------
+--------------Authenticate using gh (GitHub command)-----------------------
 #        (gh auth login)
 The command is used to authenticate your GitHub CLI (gh) with your GitHub account
 #         (gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> )
