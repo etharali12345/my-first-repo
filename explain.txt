@@ -83,4 +83,23 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 The command is used to authenticate your GitHub CLI (gh) with your GitHub account
 #         (gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> )
 
+-------------------------Head -------------------------------
+
+Summary & Explanation:
+The .git folder is responsible for tracking all changes in a Git project. One of its key components is the HEAD file, which acts as a pointer to the current branch and commit. The HEAD helps Git determine which branch you are working on.
+
+To check the current branch and commit, you can inspect the HEAD file inside the .git directory. The refs/heads/ directory stores the commit ID of the latest commit for each branch.
+
+Switching branches updates the HEAD pointer to reference the new branch. The git checkout command moves the HEAD to a different branch, and any new commits will update the stored commit ID.
+
+Making changes to a file and committing it will also update the commit ID stored in refs/heads/<branch>. You can observe this change before and after committing by checking the reference file inside .git.
+
+Git Commands Used:
+1- Navigate to the .git folder:
+        cd .git
+2- View the HEAD file (check current branch):
+        cat HEAD
+3- View the commit ID of the current branch:
+        cat .git/refs/heads/main
+
 
