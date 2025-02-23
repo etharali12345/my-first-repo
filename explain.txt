@@ -71,7 +71,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
     # Step 5: set up a branch main on my local that tracks the branch main from the remote
         git checkout main  
 
---------------push and pull ----------------------------------------
+--------------Push and Pull ----------------------------------------
     #    (git push origin main)
     When you clone a repository, Git automatically names the remote repository origin.
     Commands like (git push origin main) tell Git to push your changes to the main branch on the origin remote (the one on GitHub or wherever the repository is hosted).
@@ -80,7 +80,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 
 
 
---------------Authenticate using gh (GitHub command)-----------------------
+--------------Authenticate using gh (GitHub command in VS)-----------------------
 #        (gh auth login)
 The command is used to authenticate your GitHub CLI (gh) with your GitHub account
 #         (gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> )
