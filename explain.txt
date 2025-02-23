@@ -46,6 +46,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 
 
 ---------- Create a repo using commands line ----------------------------------------
+
 1- make dir ex:second-reop, get in it *cd
 2- initialize the repo with the folder name
         (git init)
@@ -69,6 +70,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
       This directory is blank. This is because I haven't set up a branch that matches what I have on the server repository.
     # Step 5: set up a branch main on my local that tracks the branch main from the remote
         git checkout main  
+
 --------------push and pull ----------------------------------------
     #    (git push origin main)
     When you clone a repository, Git automatically names the remote repository origin.
@@ -82,6 +84,8 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 #        (gh auth login)
 The command is used to authenticate your GitHub CLI (gh) with your GitHub account
 #         (gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> )
+
+
 
 -------------------------.git & Head -------------------------------
 
@@ -101,6 +105,7 @@ Git Commands Used:
         #   cat HEAD
 3- View the commit ID of the current branch:
        #    cat .git/refs/heads/main
+
 
 -------------------------DIFF & Log------------------------
 
@@ -124,6 +129,7 @@ Git Commands Used:
 
 4- Comparing Branches: To check differences between two branches:  
          #   git diff <main> <branch2>
+
 
 -------------------------Blame-------------------------------------
 1- Tracking Changes by User:
