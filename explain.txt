@@ -45,7 +45,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 
 
 
----------- Create a repo using commands like ----------------------------------------
+---------- Create a repo using commands line ----------------------------------------
 1- make dir ex:second-reop, get in it *cd
 2- initialize the repo with the folder name
         (git init)
@@ -78,7 +78,7 @@ Note: branches exist in isolation: (main does not know the changes in the branch
 
 
 
---------------commandS specifically for GitHub CL not GIT
+--------------commandS specifically for GitHub CL not GIT-----------------------
 #        (gh auth login)
 The command is used to authenticate your GitHub CLI (gh) with your GitHub account
 #         (gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> )
@@ -96,10 +96,34 @@ Making changes to a file and committing it will also update the commit ID stored
 
 Git Commands Used:
 1- Navigate to the .git folder:
-        cd .git
+        #   cd .git
 2- View the HEAD file (check current branch):
-        cat HEAD
+        #   cat HEAD
 3- View the commit ID of the current branch:
-        cat .git/refs/heads/main
+       #    cat .git/refs/heads/main
 
+-------------------------DIFF------------------------
+
+1- Checking Changed Files: 
+	git status: shows which files have been modified, but it does not display the actual changes.  
+	git difF: goes a step further by showing what exactly has been added or removed in the modified files.  
+    this command helps track changes, avoid mistakes, and ensure code consistency across different versions.
+
+2-  Comparing Local Changes:
+    Before committing, this shows differences between the working version (the file) and the last committed version (in the head):  
+    HEAD refers to the latest commit on the current branch. 
+	    #   git diff HEAD <file>
+
+    
+3- Comparing Commits: To see the differences between two specific commits:  
+   a-To view commit history and get commit IDs.  
+         #   git log
+     for shorter version       
+         #   git log --pretty=oneline
+    b-then to see the differences;
+         #   git diff commit1_ID> commit2_ID>
+
+
+4- Comparing Branches: To check differences between two branches:  
+         #   git diff main> branch2>
 
