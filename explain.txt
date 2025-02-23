@@ -138,16 +138,16 @@ The git blame command tracks who made specific changes to a file, when, and what
 The Output:
 commit_id author timestamp line_number change
 
-3- Limiting the Output: 
+2- Limiting the Output: 
 Restricting the output to specific lines using (-L) flag to only display changes in a certain range.
 	#	git blame -L <start_lineNum>,<end_lineNum> <file>
 
-4- Viewing Detailed Changes:
+3- Viewing Detailed Changes:
 -To see more detailed changes of a specific commit, use git log (-p)(patch: refers to changes made to the files in a commit) with the commit ID.
 -hows commits from the specified commit ID up to the newest commit (the on in HEAD).
 	#	git log -p <commit_id>
 
-5- Customizing Output:
+4- Customizing Output:
 You can adjust the display format, including showing full commit hashes, email addresses, or modifying the date format with the (-l) flag.
 	#	git blame -l <file>
 
