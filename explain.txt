@@ -143,7 +143,8 @@ Restricting the output to specific lines using (-L) flag to only display changes
 	#	git blame -L <start_lineNum>,<end_lineNum> <file>
 
 4- Viewing Detailed Changes:
-To see more detailed changes of a specific commit, use git log (-p) with the commit ID.
+-To see more detailed changes of a specific commit, use git log (-p)(patch: refers to changes made to the files in a commit) with the commit ID.
+-hows commits from the specified commit ID up to the newest commit (the on in HEAD).
 	#	git log -p <commit_id>
 
 5- Customizing Output:
